@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+import Header from "./components/Header/Header";
+import Form from "./components/Form/Form";
+import List from "./components/List/List";
+import "./styles.css";
 
-function App() {
+export const AppContext = createContext();
+
+export function App() {
+  const [todoName, setTodoName] = useState("");
+  const [todoDate, setTodoDate] = useState("2021-03-01");
+  const [todoList, setTodoList] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AppContext.Provider
+        value={{
+          todoName,
+          setTodoName,
+          todoDate,
+          setTodoDate,
+          todoList,
+          setTodoList
+        }}
+      >
+        <Header />
+        <Form />
+        <List />
+      </AppContext.Provider>
     </div>
   );
 }
-
-export default App;

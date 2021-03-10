@@ -1,0 +1,40 @@
+.form-div {
+  text-align: center;
+  padding: 20px;
+}
+
+.input-task {
+  width: 25%;
+  padding: 10px 10px;
+  color: brown;
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
+}
+
+.input-btn {
+  margin: 20px;
+  background-color: royalblue;
+  border: none;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: "Lato", sans-serif;
+}
+
+.input-btn:hover {
+  background-color: blue;
+}
+
+.dateLabel {
+  font-family: "Roboto", sans-serif;
+}
+
+.datePicker {
+  width: 10%;
+  padding: 2px 2px;
+  font-size: 13px;
+  margin-left: 10px;
+  font-family: "Roboto", sans-serif;
+}

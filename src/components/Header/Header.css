@@ -1,0 +1,14 @@
+.header-div {
+  background-color: #343a40;
+  text-align: center;
+  color: white;
+  margin: 0;
+  height: 40px;
+  font-family: "Lato", sans-serif;
+  padding: 5px;
+}
+
+p {
+  margin: 0;
+  font-size: 25px;
+}
