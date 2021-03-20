@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../App";
+import Button from '@material-ui/core/Button';
+import Tooltip from '@material-ui/core/Tooltip';
 import "./Form.css";
 
 function Form() {
@@ -38,7 +40,7 @@ function Form() {
                 <br />
                 <label htmlFor="todo-date" className="dateLabel">
                     Planned date:
-        </label>
+                </label>
 
                 <input
                     type="date"
@@ -50,11 +52,16 @@ function Form() {
                     onChange={handleDateChange}
                     className="datePicker"
                 />
-                <button className="input-btn" type="submit">
-                    <span role="img" aria-label="sheep">
+
+                <Tooltip title="Login to your account">
+                    <Button type="submit" style={{ margin: "30px" }} variant="contained" color="primary">Add todo</Button>
+                </Tooltip>
+                {/* <button className="input-btn" type="submit">
+                    <span role="img" aria-label="react">
                         Add todo
-          </span>
-                </button>
+                    </span>
+                </button> */}
+
             </form>
         </div>
     );
